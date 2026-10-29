@@ -1,0 +1,8 @@
+,value
+n_domains_original,16.0
+n_domains_depth_regressed,13.0
+ARI_original_vs_regressed,0.7835
+same_domain_edge_frac_regressed,0.792
+null_mean,0.0926
+null_sd,0.0032
+empirical_p,0.001

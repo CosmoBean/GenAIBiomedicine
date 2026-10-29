@@ -1,0 +1,9 @@
+structure,description,K745NZ_E762OE_min,conformation
+4HJO,"WT (+V948R) inactive, erlotinib, 2.75 A [primary]",13.3,alphaC-out (salt bridge broken)
+1M17,"WT active-like, erlotinib, 2.6 A",3.05,alphaC-in (K745-E762 salt bridge)
+2ITX,"WT, AMP-PNP, 2.98 A",3.58,alphaC-in (K745-E762 salt bridge)
+2ITN,"G719S, AMP-PNP, 2.47 A",3.41,alphaC-in (K745-E762 salt bridge)
+2ITV,"L858R, AMP-PNP, 2.47 A",3.46,alphaC-in (K745-E762 salt bridge)
+2JIT,"T790M apo, 3.1 A",2.5,alphaC-in (K745-E762 salt bridge)
+4I22,"L858R+T790M (+V948R), gefitinib, 1.71 A",12.18,alphaC-out (salt bridge broken)
+AF-P00533-F1-MODEL_V6,AlphaFold DB v6 model (full length),5.08,alphaC-out (salt bridge broken)

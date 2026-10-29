@@ -1,0 +1,33 @@
+resolution,cluster,n_cells,label
+0.3,0,1202,Naive CD4 T/Memory CD4 T (ambiguous)
+0.3,1,341,B
+0.3,2,671,CD14 Mono
+0.3,3,411,NK
+0.3,4,13,Platelet
+0.6,0,1187,Naive CD4 T/Memory CD4 T (ambiguous)
+0.6,1,341,B
+0.6,2,176,FCGR3A Mono
+0.6,3,460,CD14 Mono
+0.6,4,426,NK
+0.6,5,35,DC
+0.6,6,13,Platelet
+1.0,0,508,Memory CD4 T
+1.0,1,643,Naive CD4 T
+1.0,2,342,B
+1.0,3,157,FCGR3A Mono
+1.0,4,155,NK
+1.0,5,306,CD8 T
+1.0,6,475,CD14 Mono
+1.0,7,38,DC
+1.0,8,14,Platelet
+1.4,0,93,Naive CD4 T
+1.4,1,341,B
+1.4,2,349,Memory CD4 T
+1.4,3,274,Memory CD4 T
+1.4,4,193,FCGR3A Mono
+1.4,5,155,NK
+1.4,6,287,CD8 T
+1.4,7,455,Naive CD4 T
+1.4,8,438,CD14 Mono
+1.4,9,38,DC
+1.4,10,15,Platelet

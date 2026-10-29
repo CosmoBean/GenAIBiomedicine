@@ -1,0 +1,10 @@
+,value
+n_baseline,2638.0
+n_subsample,1847.0
+n_shared,1847.0
+n_clusters_baseline,9.0
+n_clusters_subsample,7.0
+ARI_clusters,0.6529225766078375
+NMI_clusters,0.754580734649208
+ARI_labels,0.6529225766078375
+label_agreement,0.7763941526800217

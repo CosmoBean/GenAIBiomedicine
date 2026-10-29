@@ -1,0 +1,35 @@
+{
+  "seed": 0,
+  "qc": {
+    "min_genes": 200,
+    "max_genes": 2500,
+    "max_pct_mt": 5.0,
+    "min_cells": 3
+  },
+  "before": {
+    "cells": 2700,
+    "genes": 32738
+  },
+  "after": {
+    "cells": 2638,
+    "genes": 13656
+  },
+  "removed": {
+    "low_genes": 0,
+    "high_genes": 5,
+    "high_mt": 57
+  },
+  "normalize": "normalize_total(1e4)+log1p",
+  "hvg": "seurat top 2000",
+  "regress_out": [
+    "total_counts",
+    "pct_counts_mt"
+  ],
+  "scale_max": 10,
+  "n_pcs": 30,
+  "n_neighbors": 15,
+  "leiden": "igraph, n_iterations=2",
+  "baseline_resolution": 1.0,
+  "n_clusters": 9,
+  "scanpy": "1.12.5"
+}

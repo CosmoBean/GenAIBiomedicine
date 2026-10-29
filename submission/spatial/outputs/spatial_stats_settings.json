@@ -1,0 +1,21 @@
+{
+  "graph": "squidpy spatial_neighbors coord_type=grid n_neighs=6 n_rings=1 on obsm['spatial'] (Visium hex lattice)",
+  "graph_info": {
+    "nodes": 2683,
+    "undirected_edges": 7759,
+    "mean_degree": 5.783824077525159,
+    "degree_counts": {
+      "1": 4,
+      "2": 19,
+      "3": 68,
+      "4": 78,
+      "5": 124,
+      "6": 2390
+    }
+  },
+  "n_perm": 1000,
+  "seed_nullA": 0,
+  "seed_nullB": 1,
+  "nhood_enrichment_seed": 0,
+  "tail": "one-sided (observed >= null)"
+}

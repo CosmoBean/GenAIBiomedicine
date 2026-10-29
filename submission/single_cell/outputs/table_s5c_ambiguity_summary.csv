@@ -1,0 +1,12 @@
+,value
+n_cluster0,508.0
+n_cluster1,643.0
+bimodality_coefficient,0.386
+knn_weight_to_other_cluster_from0,0.21
+knn_weight_to_other_cluster_from1,0.157
+cluster1_CD8A_or_CD8B_pos,0.258
+cluster1_CD8pos_CCR7pos_GZMKneg_CCL5neg,0.101
+cluster1_CD4_detected,0.09
+auc_score_separates_cluster1_from_0,0.732
+cluster1_CD8_share_adjusted_bg_B,0.397
+cluster1_CD8_share_adjusted_bg_NK,0.311

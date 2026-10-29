@@ -1,0 +1,10 @@
+baseline_label,same_label_frac,n_shared
+B,0.992,245
+CD14 Mono,0.95,339
+CD8 T,0.0,207
+DC,0.778,27
+FCGR3A Mono,0.947,114
+Memory CD4 T,0.694,360
+NK,1.0,106
+Naive CD4 T,0.871,441
+Platelet,0.0,8

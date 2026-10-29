@@ -1,0 +1,4 @@
+variant,canonical_pos,stated_wt,uniprot_residue,wt_matches,context
+G719S,719,G,G,True,KIKVL[G]SGAFG
+T790M,790,T,T,True,TVQLI[T]QLMPF
+L858R,858,L,L,True,ITDFG[L]AKLLG

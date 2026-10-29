@@ -1,0 +1,9 @@
+structure,chain,description,author_minus_canonical,resolved_canonical_range,n_resolved,G719S_author_res,T790M_author_res,L858R_author_res,sequence_mismatches_vs_UniProt,missing_sites
+4HJO,A,"WT (+V948R) inactive, erlotinib, 2.75 A [primary]",-24,703-984,278,GLY695,THR766,LEU834,ARG924->canon V948,none
+1M17,A,"WT active-like, erlotinib, 2.6 A",-24,696-1019,312,GLY695,THR766,LEU834,none,none
+2ITX,A,"WT, AMP-PNP, 2.98 A",0,697-1019,307,GLY719,THR790,LEU858,none,none
+2ITN,A,"G719S, AMP-PNP, 2.47 A",0,696-1019,304,SER719,THR790,LEU858,SER719->canon G719,none
+2ITV,A,"L858R, AMP-PNP, 2.47 A",0,696-1019,303,GLY719,THR790,ARG858,ARG858->canon L858,none
+2JIT,A,"T790M apo, 3.1 A",0,696-1016,299,GLY719,MET790,LEU858,MET790->canon T790,none
+4I22,A,"L858R+T790M (+V948R), gefitinib, 1.71 A",0,700-1014,297,GLY719,MET790,ARG858,MET790->canon T790; ARG858->canon L858; ARG948->canon V948,none
+AF-P00533-F1-MODEL_V6,A,AlphaFold DB v6 model (full length),0,1-1210,1210,GLY719,THR790,LEU858,none,none

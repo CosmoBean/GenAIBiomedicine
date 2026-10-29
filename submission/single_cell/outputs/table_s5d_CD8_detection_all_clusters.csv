@@ -1,0 +1,10 @@
+cluster,CD8A_or_CD8B_detected,label
+0,0.11,Memory CD4 T
+1,0.258,Naive CD4 T
+2,0.032,B
+3,0.076,FCGR3A Mono
+4,0.103,NK
+5,0.601,CD8 T
+6,0.036,CD14 Mono
+7,0.079,DC
+8,0.071,Platelet

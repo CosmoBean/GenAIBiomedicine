@@ -1,0 +1,6 @@
+structure,residue858,n_neighbours_4p5A,hydrophobic_neighbours,n_hydrophobic,acidic_neighbours,alphaC_neighbours
+4HJO,LEU,7,"Leu788, Phe856, Leu861, Leu862",4,ASP855,
+1M17,LEU,8,"Val834, Phe856, Val876",3,ASP837,
+2ITX,LEU,6,"Val834, Phe856",2,ASP837,
+2ITV,ARG,8,"Val834, Phe856, Pro877, Tyr891",4,ASP837,
+4I22,ARG,8,"Phe723, Phe856, Leu861, Leu862",4,"ASP837, ASP855",

@@ -1,0 +1,4 @@
+variant,canonical_pos,pLDDT,window_mean_pLDDT_pm5,kinase_domain_mean_pLDDT
+G719S,719,73.3,75.3,84.1
+T790M,790,88.4,83.6,84.1
+L858R,858,51.2,59.2,84.1

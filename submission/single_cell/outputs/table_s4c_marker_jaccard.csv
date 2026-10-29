@@ -1,0 +1,8 @@
+label,jaccard_top20
+B,1.0
+CD14 Mono,1.0
+DC,0.905
+FCGR3A Mono,0.667
+Memory CD4 T,0.538
+NK,0.538
+Naive CD4 T,0.905

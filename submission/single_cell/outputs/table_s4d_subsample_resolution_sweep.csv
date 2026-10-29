@@ -1,0 +1,8 @@
+resolution,n_clusters,ARI_vs_baseline,label_agreement,labels
+0.3,4,0.519105880807474,0.3719545208446129,B; CD14 Mono; NK; Naive CD4 T/Memory CD4 T (ambiguous)
+0.6,5,0.6291338015370734,0.42176502436383323,B; CD14 Mono; FCGR3A Mono; NK; Naive CD4 T/Memory CD4 T (ambiguous)
+1.0,7,0.6529225766078375,0.7763941526800217,B; CD14 Mono; DC; FCGR3A Mono; Memory CD4 T; NK; Naive CD4 T
+1.2,8,0.6696980360641027,0.8061721710882512,B; CD14 Mono; CD8 T; DC; FCGR3A Mono; Memory CD4 T; NK; Naive CD4 T
+1.4,11,0.6291773544470645,0.7996751488900921,B; CD14 Mono; CD8 T; DC; FCGR3A Mono; Memory CD4 T; NK; Naive CD4 T; Naive CD4 T/Memory CD4 T (ambiguous)
+1.6,13,0.5328706855574599,0.8061721710882512,B; CD14 Mono; CD8 T; DC; FCGR3A Mono; Memory CD4 T; Memory CD4 T/Naive CD4 T (ambiguous); NK; Naive CD4 T
+2.0,19,0.5100940364083699,0.7780184082295615,B; CD14 Mono; CD8 T; DC; FCGR3A Mono; Memory CD4 T; Memory CD4 T/Naive CD4 T (ambiguous); NK; Naive CD4 T; Naive CD4 T/Memory CD4 T (ambiguous); Platelet

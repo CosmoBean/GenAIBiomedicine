@@ -1,0 +1,7 @@
+from_res,to_res,parent,children
+0.3,0.6,"2 (CD14 Mono, n=671)","2 (FCGR3A Mono, 26%); 3 (CD14 Mono, 69%)"
+0.6,1.0,"0 (Naive CD4 T/Memory CD4 T (ambiguous), n=1187)","0 (Memory CD4 T, 43%); 1 (Naive CD4 T, 54%)"
+0.6,1.0,"2 (FCGR3A Mono, n=176)","3 (FCGR3A Mono, 89%); 6 (CD14 Mono, 11%)"
+0.6,1.0,"4 (NK, n=426)","4 (NK, 36%); 5 (CD8 T, 63%)"
+1.0,1.4,"0 (Memory CD4 T, n=508)","0 (Naive CD4 T, 14%); 2 (Memory CD4 T, 56%); 3 (Memory CD4 T, 26%)"
+1.0,1.4,"1 (Naive CD4 T, n=643)","3 (Memory CD4 T, 18%); 7 (Naive CD4 T, 68%)"

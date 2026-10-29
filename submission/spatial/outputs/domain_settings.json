@@ -1,0 +1,26 @@
+{
+  "seed": 0,
+  "qc": {
+    "min_counts": 5000,
+    "min_genes": 1000,
+    "max_pct_mt": 30.0,
+    "min_cells": 10
+  },
+  "before": {
+    "spots": 2702,
+    "genes": 32285,
+    "in_tissue": 2702
+  },
+  "after": {
+    "spots": 2683,
+    "genes": 17535
+  },
+  "hvg": "seurat_v3 top 2000 on raw counts",
+  "normalize": "normalize_total 1e4 + log1p",
+  "scale_max": 10,
+  "n_pcs": 30,
+  "n_neighbors": 15,
+  "leiden": "igraph, res=0.5, n_iterations=2",
+  "n_domains": 16,
+  "spatial_fields_used_for_clustering": "none (asserted)"
+}

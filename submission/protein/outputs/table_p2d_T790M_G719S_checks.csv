@@ -1,0 +1,14 @@
+check,superposition,mutant_structure,reference,n_CA_superposed,CA_RMSD,WT_Thr790_sidechain_to_ligand,Met790_sidechain_to_ligand,n_ligand_atoms_within_3A_of_Met,WT_Gly719_CA_to_phosphateO,Ser719_OG_to_phosphateO,Ploop_718_726_CA_RMSD,Ploop_max_CA_shift
+T790M side chain vs ligand (superposed),global kinase-domain CA,2JIT,4HJO (AQ4),264,3.65,3.48,1.09,4.0,,,,
+T790M side chain vs ligand (superposed),local ATP-pocket CA (<=10 A of ligand),2JIT,4HJO (AQ4),67,2.75,3.48,1.28,4.0,,,,
+T790M side chain vs ligand (superposed),global kinase-domain CA,2JIT,1M17 (AQ4),268,1.89,3.41,0.94,5.0,,,,
+T790M side chain vs ligand (superposed),local ATP-pocket CA (<=10 A of ligand),2JIT,1M17 (AQ4),64,1.43,3.41,0.63,5.0,,,,
+T790M side chain vs ligand (superposed),global kinase-domain CA,2JIT,2ITX (ANP),264,2.03,3.13,3.92,0.0,,,,
+T790M side chain vs ligand (superposed),local ATP-pocket CA (<=10 A of ligand),2JIT,2ITX (ANP),69,1.94,3.13,3.84,0.0,,,,
+T790M side chain vs ligand (superposed),global kinase-domain CA,4I22,4HJO (AQ4),246,0.88,3.48,3.46,0.0,,,,
+T790M side chain vs ligand (superposed),local ATP-pocket CA (<=10 A of ligand),4I22,4HJO (AQ4),67,0.49,3.48,3.26,0.0,,,,
+T790M side chain vs ligand (superposed),global kinase-domain CA,4I22,1M17 (AQ4),250,2.79,3.41,3.51,0.0,,,,
+T790M side chain vs ligand (superposed),local ATP-pocket CA (<=10 A of ligand),4I22,1M17 (AQ4),64,1.6,3.41,2.52,3.0,,,,
+T790M side chain vs ligand (superposed),global kinase-domain CA,4I22,2ITX (ANP),249,2.75,3.13,4.82,0.0,,,,
+T790M side chain vs ligand (superposed),local ATP-pocket CA (<=10 A of ligand),4I22,2ITX (ANP),68,2.19,3.13,4.58,0.0,,,,
+G719S Ser OG to AMP-PNP phosphate O,global kinase-domain CA,2ITN,2ITX (WT),255,0.82,,,,6.78,5.15,0.91,1.95

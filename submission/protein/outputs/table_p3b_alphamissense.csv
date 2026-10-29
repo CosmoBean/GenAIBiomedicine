@@ -1,0 +1,4 @@
+protein_variant,am_pathogenicity,am_class
+G719S,0.998,LPath
+T790M,0.966,LPath
+L858R,0.9968,LPath
