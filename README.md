@@ -1,4 +1,4 @@
-# GenAI for Biomedicine — Assignment 3
+# GenAI for Biomedicine — Homework 2
 
 Scientific analysis with an AI agent workspace (CMU 11-781 / 02-741, Fall 2026):
 EGFR variant structure analysis, PBMC3k single-cell robustness, and Visium spatial domains.

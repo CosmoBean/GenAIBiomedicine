@@ -1,4 +1,4 @@
-# Assignment 3: Scientific Analysis with AI Agent Workspaces
+# Homework 2: Scientific Analysis with AI Agent Workspaces
 
 CMU 11-781 / 02-741, Fall 2026. The full write-up, with all three Agent Audits and the checkpoint evidence index, is in **`report.pdf`**.
 
@@ -53,7 +53,7 @@ Shared settings and seeds are in `single_cell/code/common.py`, `spatial/code/com
 ```
 submission/
 ├── report.pdf            final report
-├── report/               report.tex source + build_report.sh
+├── report/               report.tex + cisXXX.cls (UPenn-style HW class) + build_report.sh
 ├── README.md  run_all.sh  fetch_data.sh  requirements.txt
 ├── protein/      code/ (01–03, structlib.py)   outputs/ (table_p*, fig_p4*, egfr_4hjo_interactive.html)
 ├── single_cell/  code/ (01–04, common.py)      outputs/ (table_s*, fig_s*, umap_*, dotplot_*)
@@ -64,4 +64,4 @@ The `*.h5ad` files in `outputs/` are intermediate objects (about 150 MB) that th
 
 ## Before submitting
 
-Each Agent Audit in `report/report.tex` (Appendix B) ends with a highlighted **"Student verification"** box. The rubric asks what *you* independently verified, so do those checks yourself and write your own result into each box. Then run `bash report/build_report.sh` to rebuild the PDF. Also replace `[Student Name]` in the title block.
+Each Agent Audit in `report/report.tex` (sub-questions 1(e), 2(f), 3(f)) ends with a highlighted **"Student verification"** box. The rubric asks what *you* independently verified, so do those checks yourself and write your own result into each box. Then run `bash report/build_report.sh` to rebuild the PDF. Also put your name and email in `\HWauthor{...}` at the top of `report.tex`.
