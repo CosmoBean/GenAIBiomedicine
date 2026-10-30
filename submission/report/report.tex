@@ -28,7 +28,7 @@
 \noindent\textbf{Setup.} All analyses were run by an AI agent workspace (Claude Code, model Claude Opus 5.5) on a CPU-only Linux machine; no GPU or structure prediction was needed. All code and outputs are in the submitted \code{submission/} folder; \code{bash submission/run\_all.sh} rebuilds the environment, downloads and checksums the data, reruns every analysis and compiles this PDF in about 4 minutes. Claims are tagged \obs\ (computed here), \pred\ (interpretation) or \ext\ (retrieved, with citation).
 
 \medskip
-\noindent\textbf{Checkpoint evidence index.} All checkpoints: \emph{complete} (A: complete once the student-verification boxes are filled in).\\[3pt]
+\noindent\textbf{Checkpoint evidence index.} P1--P4, S1--S5 and T1--T5: \emph{complete}. A: \emph{needs student verification}; the three prompts below must be completed before submission.\\[3pt]
 {\small
 \begin{tabularx}{\linewidth}{@{}l Y l Y@{}}
 \toprule
@@ -52,7 +52,7 @@ S4 & 2(d), p.\,\pageref{s4}; Table~\ref{tab:robust}, Fig.~\ref{fig:umap}; \code{
 \q{Identify the protein, verify each variant against its sequence, and map all candidate residues to the chosen structure.}
 The protein is human EGFR, UniProt P00533 (1{,}210 aa, entry v301); all three variants lie in the kinase domain (712--979) \ext. The stated wild-type residues match UniProt at G719 (first Gly of the GxGxxG P-loop), T790 (gatekeeper) and L858 (three residues after DFG\,855, in the activation segment) \obs.
 
-Each structure's full SEQRES was aligned to UniProt (Biopython, BLOSUM62) and cross-checked against the depositors' SEQADV records (Table~\ref{tab:map}). The key finding is that \textbf{4HJO uses mature-protein numbering, canonical $-24$}: L858 is Leu834 and T790 is Thr766 in 4HJO. In every structure the only mismatches against UniProt are the deposited mutations, including 4HJO's engineered V948R, which keeps the kinase monomeric and inactive~\cite{zhang2006} and lies 26--31\,\AA\ from all three sites. AlphaFold~\cite{jumper2021} pLDDT is 73 (G719), 88 (T790) and only 51 (L858), consistent with a flexible activation loop.
+Each structure's full SEQRES was aligned to UniProt (Biopython, BLOSUM62) and cross-checked against the depositors' SEQADV records (Table~\ref{tab:map}). The key finding is that \textbf{4HJO uses mature-protein numbering, canonical $-24$}: L858 is Leu834 and T790 is Thr766 in 4HJO. In every structure the only mismatches against UniProt are the deposited mutations, including 4HJO's engineered V948R, which keeps the kinase monomeric and inactive~\cite{zhang2006} and lies 26--31\,\AA\ from all three sites. AlphaFold~\cite{jumper2021} pLDDT is 73 (G719), 88 (T790) and 51 (L858); the low L858 value limits confidence in its local model geometry.
 
 \begin{table}[H]
 \centering\footnotesize
@@ -152,7 +152,7 @@ Labels come from Wilcoxon markers computed on these data, plus a rule that score
 Cl. & Cells & Top markers (Wilcoxon, these data) & Label \\
 \midrule
 0 & 508 & IL32, LTB, CD3D, IL7R, S100A4 & Memory CD4 T \\
-1 & 643 & ribosomal genes, LDHB, CD3D; CCR7 in 44\% & Naive T, CD4/CD8 mixed (see 2(e)) \\
+1 & 643 & ribosomal genes, LDHB, CD3D; CCR7 in 44\% & Naive CD4 T (ambiguous; see 2(e)) \\
 2 & 342 & CD79A, MS4A1, CD79B & B \\
 3 & 157 & FCGR3A, LST1, AIF1 & FCGR3A$^+$ monocyte \\
 4 & 155 & GNLY, GZMB, NKG7, PRF1 & NK \\
@@ -170,7 +170,7 @@ Leiden at 0.3, 0.6, 1.0 and 1.4 on the same graph (Table~\ref{tab:robust}). \tex
 
 \HWsubproblem[Downsampling check (S4).]\label{s4}
 \q{Rerun a fixed-seed 60--80\% sample and compare retained cells quantitatively.}
-A 70\% sample (1{,}847 cells, seed 42) re-run from raw counts gives 7 clusters, ARI 0.65 and \textbf{77.6\% label agreement} on shared cells (Fig.~\ref{fig:umap}B). B, NK and monocytes agree at $\ge$0.95. CD8\,T cells split between NK (55\%) and memory CD4 (43\%), and the 8 platelets join the FCGR3A monocytes. Re-clustering at 1.2, or using five other subsample seeds, recovers CD8\,T every time; platelets return in only 1 of 5. So the CD8/NK split is real but near the resolution threshold, and 14 platelets are too few to survive subsampling.
+A 70\% sample (1{,}847 cells, seed 42) re-run from raw counts gives 7 clusters, ARI 0.65 and \textbf{77.6\% label agreement} on shared cells (Fig.~\ref{fig:umap}B). B, NK and monocytes agree at $\ge$0.95. CD8\,T cells split between NK (55\%) and memory CD4 (43\%), and the 8 platelets join the FCGR3A monocytes. Re-clustering at 1.2, or using five other subsample seeds, recovers CD8\,T every time; platelets return in only 1 of 5. Thus the CD8/NK distinction is marker-supported but sensitive to resolution and sampling, while 14 platelets are too few to survive subsampling reliably.
 
 \begin{table}[H]
 \centering\small
@@ -204,7 +204,7 @@ Subsample seeds 1--5 & 8--9 & -- & -- & CD8\,T 5/5, platelets 1/5 \\
 
 \HWsubproblem[Ambiguous population (S5).]\label{s5}
 \q{Investigate one unclear population with marker comparisons and a reason for the uncertainty.}
-\textbf{Naive vs memory CD4 (clusters 1 and 0).} The two differ only modestly (cluster 0: S100A4, S100A11, IL32 higher; cluster 1: CCR7, SELL and ribosomal genes higher). The naive-minus-memory score is not bimodal (bimodality coefficient 0.39 $<$ 0.555; AUC 0.73), and 16--21\% of each cluster's kNN edge weight points to the other cluster (Fig.~\ref{fig:s5}) \obs. \emph{Reason} \pred: naive $\to$ central memory $\to$ effector memory is a continuous differentiation path, so the markers form a gradient rather than a gap. Cluster 1 also contains CD8 cells: 26\% express CD8A/B, against 3--10\% background in B/NK cells and only 60\% detection in true CD8\,T, giving an estimated 31--40\% CD8 T cells. Naive CD8 cells share the CCR7/SELL/LEF1 programme, and CD4 mRNA is detected in only 9--12\% of CD4 T cells, so we relabel cluster 1 ``Naive T, CD4/CD8 mixed''. Protein data (CITE-seq) would be needed to resolve it.
+\textbf{Naive vs memory CD4 (clusters 1 and 0).} The two differ only modestly (cluster 0: S100A4, S100A11, IL32 higher; cluster 1: CCR7, SELL and ribosomal genes higher). The naive-minus-memory score is not bimodal (bimodality coefficient 0.39 $<$ 0.555; AUC 0.73), and 16--21\% of each cluster's kNN edge weight points to the other cluster (Fig.~\ref{fig:s5}) \obs. \emph{Reason} \pred: naive $\to$ central memory $\to$ effector memory is a continuous differentiation path, so the markers form a gradient rather than a gap. Cluster 1 also has a CD8-marker-positive component: 26\% express CD8A/B, versus 3--10\% in B/NK cells and 60\% in the CD8\,T cluster. Normalising these detection rates is consistent with a 31--40\% naive-CD8 contribution, but this is an indirect estimate rather than a definitive cell-type call. Naive CD8 cells share the CCR7/SELL/LEF1 programme, and CD4 mRNA is detected in only 9--12\% of CD4 T cells. We therefore retain the reproducible automatic label ``Naive CD4 T'' while flagging the cluster as ambiguous and potentially mixed; protein data (CITE-seq) would be needed to resolve it.
 
 \begin{figure}[H]
 \centering
@@ -214,7 +214,7 @@ Subsample seeds 1--5 & 8--9 & -- & -- & CD8\,T 5/5, platelets 1/5 \\
 \end{figure}
 
 \HWsubproblem[Agent audit.]
-\textbf{Sources:} PBMC3k matrix (10x Genomics via course repository, SHA-256 checked); marker biology~\cite{zheng2017,hao2021,villani2017}; scanpy~\cite{wolf2018}, Leiden~\cite{traag2019}. \textbf{Computed:} QC, clustering, UMAP, Wilcoxon markers, marker-set scores, ARI/NMI, subsampling, seed sweeps, bimodality, CD8 detection rates. \textbf{Retrieved:} canonical marker lists and cell-type biology. \textbf{Independent checks:} (1) seed-only control (ARI 0.77--0.83; 0.94 at convergence) calibrates the resolution and subsample effects; (2) the CD8 loss was re-tested at resolution 1.2 and with five subsample seeds and recovered every time, so it is a threshold effect. \textbf{Weaknesses found:} the automatic rule mislabelled cluster 1 as ``Naive CD4 T'' (relabelled; a first fix ignored CD8 dropout and was corrected after review); the resolution was chosen post hoc; recall-only stability hid impure NK clusters (purity added); Fig.~\ref{fig:s5} first had reversed colours and a saturated scale (fixed).
+\textbf{Sources:} PBMC3k matrix (10x Genomics via course repository, SHA-256 checked); marker biology~\cite{zheng2017,hao2021,villani2017}; scanpy~\cite{wolf2018}, Leiden~\cite{traag2019}. \textbf{Computed:} QC, clustering, UMAP, Wilcoxon markers, marker-set scores, ARI/NMI, subsampling, seed sweeps, bimodality, CD8 detection rates. \textbf{Retrieved:} canonical marker lists and cell-type biology. \textbf{Independent checks:} (1) seed-only control (ARI 0.77--0.83; 0.94 at convergence) calibrates the resolution and subsample effects; (2) the CD8 loss was re-tested at resolution 1.2 and with five subsample seeds and recovered every time, so it is a threshold effect. \textbf{Weaknesses found:} the automatic rule called cluster 1 ``Naive CD4 T'' without exposing its CD8-marker-positive component; we retain that reproducible label but flag it as ambiguous, rather than treating an indirect contamination estimate as a relabeling. The resolution was chosen post hoc; recall-only stability hid impure NK clusters (purity added); Fig.~\ref{fig:s5} first had reversed colours and a saturated scale (fixed).
 \studentbox{from \code{table\_s2b\_top10\_markers.csv} alone, assign clusters 2, 4 and 6; rerun \code{03\_downsample.py} and confirm 77.6\% agreement. Result: \underline{\hspace{5cm}}}
 
 %==========================================================================
@@ -251,7 +251,7 @@ Gene set: the top 200 HVGs (no mitochondrial genes). Method: Moran's I on the sa
 DE: Wilcoxon one-vs-rest across domains on the same 200 genes. Spearman $\rho$ between Moran's I and DE $z$ is \textbf{0.52}, falling to 0.29 if DE is ranked by fold change. Examples (Table~\ref{tab:t4}): Prkcd and Mbp mark large regions that match a domain, so they rank high in both. \emph{Agrp} is spatially sharp (Moran rank 7) but DE rank 183: it is confined to the small arcuate region, so most spots of its best domain are zero and the rank-based test penalises it, despite a large fold change (log$_2$FC 5.5). Cpne9 separates domains on average but varies in a graded way inside them. Moran's I measures neighbour agreement; DE measures separation of predefined groups.
 
 \begin{table}[H]
-\centering\small
+\centering\footnotesize
 \caption{\textbf{Ranking examples} (rank of 200; \code{table\_t3b\_t4\_moran\_and\_DE\_rankings.csv}).}
 \label{tab:t4}
 \begin{tabular}{@{}l l c c c c@{}}
