@@ -16,7 +16,7 @@ bash submission/run_all.sh     # about 4 min on CPU
 1. Creates `.venv` with uv from `requirements.txt` (Python 3.12).
 2. Runs `fetch_data.sh` to download and SHA-256-check all inputs into `data/`.
 3. Runs the scripts below in order.
-4. Rebuilds `report.pdf`.
+4. Compiles `report.pdf` from LaTeX (Tectonic is downloaded into `.venv/bin` on first use).
 
 | Order | Script | Checkpoints | Main outputs |
 |---|---|---|---|
@@ -31,7 +31,7 @@ bash submission/run_all.sh     # about 4 min on CPU
 | 9 | `protein/code/01_map_and_measure.py` | P1, P2 | sequence check, SEQRES mapping, distances, SASA, pLDDT, paralogs |
 | 10 | `protein/code/02_mechanism_checks.py` | P2, P3 | T790M superpositions, G719S P-loop, L858 environment |
 | 11 | `protein/code/03_render_structure.py` | P4 | annotated 4HJO figure plus interactive HTML |
-| 12 | `report/build_report.py` | R | `report.pdf` from `report/report.md` |
+| 12 | `report/build_report.sh` | R | `report.pdf` from `report/report.tex` (LaTeX, compiled with Tectonic) |
 
 Shared settings and seeds are in `single_cell/code/common.py`, `spatial/code/common.py` and `protein/code/structlib.py`.
 - **Single cell:** seed 0; subsample seed 42.
@@ -53,7 +53,7 @@ Shared settings and seeds are in `single_cell/code/common.py`, `spatial/code/com
 ```
 submission/
 ├── report.pdf            final report
-├── report/               report.md source + build_report.py
+├── report/               report.tex source + build_report.sh
 ├── README.md  run_all.sh  fetch_data.sh  requirements.txt
 ├── protein/      code/ (01–03, structlib.py)   outputs/ (table_p*, fig_p4*, egfr_4hjo_interactive.html)
 ├── single_cell/  code/ (01–04, common.py)      outputs/ (table_s*, fig_s*, umap_*, dotplot_*)
@@ -64,4 +64,4 @@ The `*.h5ad` files in `outputs/` are intermediate objects (about 150 MB) that th
 
 ## Before submitting
 
-Each Agent Audit in `report/report.md` (sections 1.5, 2.6 and 3.6) contains a highlighted **"Student verification"** box. The rubric asks what *you* independently verified, so do those checks yourself and write your own result into each box. Then run `python report/build_report.py` to rebuild the PDF.
+Each Agent Audit in `report/report.tex` (Appendix B) ends with a highlighted **"Student verification"** box. The rubric asks what *you* independently verified, so do those checks yourself and write your own result into each box. Then run `bash report/build_report.sh` to rebuild the PDF. Also replace `[Student Name]` in the title block.

@@ -37,5 +37,4 @@ $PY 02_mechanism_checks.py
 $PY 03_render_structure.py
 
 # 5. report
-cd "$ROOT/submission/report"
-$PY build_report.py
+bash "$ROOT/submission/report/build_report.sh"

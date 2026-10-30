@@ -6,3 +6,7 @@ data/
 *.h5ad
 __pycache__/
 submission/report/report.html
+# LaTeX build by-products
+submission/report/*.log
+submission/report/*.aux
+submission/report/*.pdf
