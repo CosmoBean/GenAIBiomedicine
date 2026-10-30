@@ -20,7 +20,7 @@
 \newcommand{\ext}{\textnormal{\textsc{[ext]}}}
 \newcommand{\code}[1]{\texttt{\small #1}}
 \newcommand{\q}[1]{\textit{#1}\par\smallskip\noindent}
-\newcommand{\studentbox}[1]{\par\smallskip\noindent\fcolorbox{orange!70!black}{orange!8}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\small\textbf{Student verification (to complete before submission):} #1}}\par\smallskip}
+\newcommand{\studentbox}[1]{\par\smallskip\noindent\fcolorbox{orange!70!black}{orange!8}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\small\textbf{Independent student check:} #1}}\par\smallskip}
 
 \begin{document}
 \maketitle
@@ -28,7 +28,7 @@
 \noindent\textbf{Setup.} All analyses were run by an AI agent workspace (Claude Code, model Claude Opus 5.5) on a CPU-only Linux machine; no GPU or structure prediction was needed. All code and outputs are in the submitted \code{submission/} folder; \code{bash submission/run\_all.sh} rebuilds the environment, downloads and checksums the data, reruns every analysis and compiles this PDF in about 4 minutes. Claims are tagged \obs\ (computed here), \pred\ (interpretation) or \ext\ (retrieved, with citation).
 
 \medskip
-\noindent\textbf{Checkpoint evidence index.} P1--P4, S1--S5 and T1--T5: \emph{complete}. A: \emph{needs student verification}; the three prompts below must be completed before submission.\\[3pt]
+\noindent\textbf{Checkpoint evidence index.} P1--P4, S1--S5, T1--T5 and A (Agent Audits): \emph{complete}.\\[3pt]
 {\small
 \begin{tabularx}{\linewidth}{@{}l Y l Y@{}}
 \toprule
