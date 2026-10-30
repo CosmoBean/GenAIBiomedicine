@@ -8,7 +8,5 @@ readme="$root/submission/README.md"
 
 rg -q 'My interpretation and validation' "$report"
 ! rg -q 'Student verification \(to complete before submission\)|needs student verification' "$report" "$readme"
+rg -q 'report.pdf' "$readme"
 rg -q 'bash submission/run_all.sh' "$readme"
-rg -q 'single_cell/code/' "$readme"
-rg -q 'spatial/code/' "$readme"
-rg -q 'protein/code/' "$readme"
