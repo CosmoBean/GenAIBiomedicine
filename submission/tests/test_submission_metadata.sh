@@ -6,7 +6,7 @@ root="$(cd "$(dirname "$0")/../.." && pwd)"
 report="$root/submission/report/report.tex"
 readme="$root/submission/README.md"
 
-rg -q 'Independent student check' "$report"
+rg -q 'My interpretation and validation' "$report"
 ! rg -q 'Student verification \(to complete before submission\)|needs student verification' "$report" "$readme"
 rg -q 'bash submission/run_all.sh' "$readme"
 rg -q 'single_cell/code/01_qc_baseline.py' "$readme"
