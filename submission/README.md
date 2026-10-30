@@ -64,4 +64,4 @@ The `*.h5ad` files in `outputs/` are intermediate objects (about 150 MB) that th
 
 ## Before submitting
 
-Each Agent Audit in `report/report.tex` (sub-questions 1(e), 2(f), 3(f)) ends with a highlighted **"Student verification"** box. The rubric asks what *you* independently verified, so do those checks yourself and write your own result into each box. Then run `bash report/build_report.sh` to rebuild the PDF. Also put your name and email in `\HWauthor{...}` at the top of `report.tex`.
+Each Agent Audit in `report/report.tex` (sub-questions 1(e), 2(f), 3(f)) ends with a highlighted **"Student verification"** box. The rubric asks what *you* independently verified, so do those checks yourself and write your own result into each box. Then run `bash report/build_report.sh` to rebuild the PDF.
